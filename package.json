@@ -1,0 +1,23 @@
+{
+  "name": "mangadatabase",
+  "version": "1.0.0",
+  "description": "My goal is to create a working data base that will store manga. I want to a use mango and mangoose and be able to get and add data to the database. I will start with these features. This is just something I just want do at some point so it is most just for practice with database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoJo-designs/mangaDatabase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoJo-designs/mangaDatabase/issues"
+  },
+  "homepage": "https://github.com/JoJo-designs/mangaDatabase#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  }
+}
