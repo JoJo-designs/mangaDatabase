@@ -1,14 +1,16 @@
-const { db } = require("../mangaModel");
-
-const router = require("express").Router();
+const router = require('express').Router();
 
 
-router.get('/all', async (req, res) => {
+router.on("error", error => {
+    console.log("Database Error:", error);
+  });
+
+router.get("/all", (req, res) => {
     db.manga.find({}, (error, data) => {
         if (error) {
             res.send(error);
         } else {
-            res.json(data)
+            res.json(data);
         }
     });
 });

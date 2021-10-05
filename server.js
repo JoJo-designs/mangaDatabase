@@ -15,9 +15,10 @@ const collections = ["manga"];
 
 const db = mongojs(databaseUrl, collections);
 
+
 db.on("error", error => {
-    console.log("Database Error:", error)
-});
+    console.log("Database Error:", error);
+  });
 
 app.get("/all", (req, res) => {
     db.manga.find({}, (error, data) => {

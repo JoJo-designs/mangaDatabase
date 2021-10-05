@@ -13,6 +13,16 @@ const MangaSchema = new Schema({
         trim: true,
         required: true
     },
+    illstrated: {
+        type: String,
+        trim: true,
+    },
+    publisher: {
+        type: String,
+        trim: true,
+        required: true
+    }
+
 });
 
 const Manga = mongoose.model("Manga", MangaSchema);
