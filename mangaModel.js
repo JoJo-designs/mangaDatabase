@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const MangaSchema = new Schema({
+const mangaSchema = new Schema({
     title: {
         type: String,
         trim: true,
@@ -13,7 +13,7 @@ const MangaSchema = new Schema({
         trim: true,
         required: true
     },
-    illstrated: {
+    illustrated: {
         type: String,
         trim: true,
     },
@@ -23,8 +23,9 @@ const MangaSchema = new Schema({
         required: true
     }
 
-});
+}
+);
 
-const Manga = mongoose.model("Manga", MangaSchema);
+const Manga = mongoose.model("Manga", mangaSchema);
 
 module.exports = Manga;
