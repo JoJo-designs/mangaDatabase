@@ -12,10 +12,20 @@ router.get("/api/all", (req, res) => {
     })
 })
 
-router.get("/api/one", (req, res) => {
-    Manga.findOne({ title: req.body.title} )
+router.get("/api/findOneTitle", (req, res) => {
+    Manga.findOne({ title: req.body.title})
     .then(data => {
         res.json(data);
+    })
+    .catch(err => {
+        res.status(400).json(err)
+    })
+})
+
+router.get("/api/genre", (req, res) => {
+    Manga.find({ genre: req.body.genre })
+    .then(data => {
+        res.json(data)
     })
     .catch(err => {
         res.status(400).json(err)
