@@ -21,6 +21,10 @@ const mangaSchema = new Schema({
         type: String,
         trim: true,
         required: true
+    },
+    genre: {
+        type: Array,
+        required: true
     }
 
 }

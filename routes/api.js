@@ -8,7 +8,17 @@ router.get("/api/all", (req, res) => {
         res.json(data);
     })
     .catch(err => {
-        res.status(404).json(err)
+        res.status(400).json(err)
+    })
+})
+
+router.get("/api/one", (req, res) => {
+    Manga.findOne({ title: req.body.title} )
+    .then(data => {
+        res.json(data);
+    })
+    .catch(err => {
+        res.status(400).json(err)
     })
 })
 
